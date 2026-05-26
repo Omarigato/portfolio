@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    cursor: none;
+  }
+
+  body {
+    @apply bg-bg text-white font-jakarta overflow-x-hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-clash;
+  }
+
+  ::selection {
+    @apply bg-accent/30 text-white;
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-bg;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-accent/50 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-accent;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-title {
+    @apply font-clash text-3xl sm:text-4xl lg:text-5xl font-semibold text-white;
+  }
+
+  .section-subtitle {
+    @apply text-gray-400 text-base sm:text-lg mt-2;
+  }
+
+  .accent-line {
+    @apply w-12 h-0.5 bg-accent mt-4;
+  }
+
+  .card {
+    @apply bg-surface border border-gray-800 rounded-2xl p-6 transition-all duration-300;
+  }
+
+  .card-hover {
+    @apply hover:border-accent/40 hover:bg-surface-2 hover:shadow-lg hover:shadow-accent/5;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-6 py-3 bg-accent text-white font-jakarta font-medium rounded-xl
+           transition-all duration-300 hover:bg-accent-dark hover:shadow-lg hover:shadow-accent/30
+           active:scale-95 cursor-none;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 px-6 py-3 border border-accent/50 text-accent font-jakarta font-medium
+           rounded-xl transition-all duration-300 hover:bg-accent/10 hover:border-accent
+           active:scale-95 cursor-none;
+  }
+
+  .skill-tag {
+    @apply px-3 py-1.5 bg-surface-2 border border-gray-700/50 rounded-lg text-sm text-gray-300
+           font-jakarta transition-all duration-200 hover:border-accent/50 hover:text-accent hover:bg-accent/5;
+  }
+
+  .timeline-dot {
+    @apply w-4 h-4 rounded-full bg-accent border-2 border-accent/30 shadow-lg shadow-accent/30 flex-shrink-0;
+  }
+
+  .glass {
+    @apply bg-white/5 backdrop-blur-sm border border-white/10;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-accent to-accent-light bg-clip-text text-transparent;
+  }
+
+  .glow-accent {
+    box-shadow: 0 0 30px rgba(59, 139, 212, 0.3);
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
