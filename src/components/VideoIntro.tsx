@@ -234,6 +234,22 @@ export default function VideoIntro() {
   const lang = i18n.language as 'ru' | 'en' | 'kz'
   const [modalOpen, setModalOpen] = useState(false)
   const [activeSegment, setActiveSegment] = useState<number | null>(null)
+  const [videosAvailable, setVideosAvailable] = useState<boolean | null>(null)
+
+  useEffect(() => {
+    const langs = ['ru', 'en', 'kz']
+    Promise.all(
+      langs.map(l =>
+        fetch(`/videos/video-${l}.mp4`, { method: 'HEAD' })
+          .then(r => r.ok)
+          .catch(() => false)
+      )
+    ).then(results => {
+      setVideosAvailable(results.some(Boolean))
+    })
+  }, [])
+
+  if (videosAvailable === null || !videosAvailable) return null
 
   return (
     <section id="video" className="py-16 sm:py-20">
@@ -265,7 +281,7 @@ export default function VideoIntro() {
                 <div className="relative">
                   <img
                     src="/images/photo.jpg"
-                    alt="Omar Akim"
+                    alt={t('fullname')}
                     className="w-28 h-28 rounded-full object-cover border-2 border-accent/40 opacity-30 group-hover:opacity-40 transition-opacity"
                     onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
                   />

@@ -36,7 +36,7 @@ function App() {
 
         <footer className="border-t border-gray-800 py-8 text-center">
           <p className="text-gray-500 font-jakarta text-sm">
-            © 2026 Omar Akim. Built with React + Vite + Three.js
+            © 2026 Omarigato. Build with you
           </p>
         </footer>
       </div>

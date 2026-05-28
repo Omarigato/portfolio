@@ -155,7 +155,7 @@ export default function Contact() {
                     required
                     value={form.name}
                     onChange={(e) => setForm({ ...form, name: e.target.value })}
-                    placeholder="Omar Akim"
+                    placeholder={t('fullname')}
                     className="w-full bg-surface-2 border border-gray-700 rounded-xl px-4 py-3 text-white font-jakarta text-sm placeholder-gray-600 focus:outline-none focus:border-accent/60 transition-colors cursor-none"
                   />
                 </div>
@@ -183,7 +183,7 @@ export default function Contact() {
                     rows={5}
                     value={form.message}
                     onChange={(e) => setForm({ ...form, message: e.target.value })}
-                    placeholder="Hi Omar, I have an interesting project..."
+                    placeholder={t('contact.form.text')}
                     className="w-full bg-surface-2 border border-gray-700 rounded-xl px-4 py-3 text-white font-jakarta text-sm placeholder-gray-600 focus:outline-none focus:border-accent/60 transition-colors resize-none cursor-none"
                   />
                 </div>

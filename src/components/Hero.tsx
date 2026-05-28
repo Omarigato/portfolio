@@ -66,7 +66,7 @@ export default function Hero() {
             <motion.div variants={item} className="mb-5">
               <span className="inline-flex items-center gap-2 px-3 py-1 bg-accent/10 border border-accent/25 rounded-full text-accent text-xs font-jakarta">
                 <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
-                {t('hero.greeting')} — Omarigato
+                {t('hero.greeting')} —
               </span>
             </motion.div>
 

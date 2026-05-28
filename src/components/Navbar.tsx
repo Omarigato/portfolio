@@ -77,7 +77,7 @@ export default function Navbar() {
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             className="font-clash text-base font-semibold text-white hover:text-accent transition-colors cursor-none"
           >
-            Omar<span className="text-accent">.</span>
+            Omarigato<span className="text-accent">.</span>
           </button>
 
           {/* Desktop Nav */}

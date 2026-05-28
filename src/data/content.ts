@@ -33,11 +33,11 @@ export interface Certificate {
 }
 
 export const personalInfo = {
-  name: { ru: 'Омар Аким', en: 'Omar Akim', kz: 'Омар Ақым' },
+  name: { ru: 'Омар Аким', en: 'Omar Akim', kz: 'Омар Аким' },
   fullName: {
-    ru: 'Аким Омар Абдукаримұлы',
-    en: 'Omar Akim Abdukarimouly',
-    kz: 'Ақым Омар Абдукарымұлы',
+    ru: 'Аким Омар Абдукаримович',
+    en: 'Omar Akim Abdukarimuly',
+    kz: 'Аким Омар Абдукарымұлы',
   },
   nickname: 'Omarigato',
   role: 'Full Stack Developer & AI Engineer',

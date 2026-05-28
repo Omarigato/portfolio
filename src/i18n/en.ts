@@ -1,4 +1,5 @@
 const en = {
+  fullname: 'Omar Akim',
   nav: {
     home: 'Home',
     about: 'About',
@@ -82,6 +83,7 @@ const en = {
       send: 'Send Message',
       success: 'Message sent! I will get back to you soon.',
       sending: 'Sending...',
+      text: 'Hi Omar, I have an interesting project...'
     },
     info: {
       whatsapp: 'WhatsApp',
