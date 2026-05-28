@@ -1,3 +1,6 @@
+// Set to true when you add video files to public/videos/ (video-ru.mp4, video-en.mp4, video-kz.mp4)
+export const hasVideos = false
+
 export interface Experience {
   id: string
   company: { ru: string; en: string; kz: string }

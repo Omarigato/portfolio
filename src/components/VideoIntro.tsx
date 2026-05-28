@@ -234,22 +234,6 @@ export default function VideoIntro() {
   const lang = i18n.language as 'ru' | 'en' | 'kz'
   const [modalOpen, setModalOpen] = useState(false)
   const [activeSegment, setActiveSegment] = useState<number | null>(null)
-  const [videosAvailable, setVideosAvailable] = useState<boolean | null>(null)
-
-  useEffect(() => {
-    const langs = ['ru', 'en', 'kz']
-    Promise.all(
-      langs.map(l =>
-        fetch(`/videos/video-${l}.mp4`, { method: 'HEAD' })
-          .then(r => r.ok)
-          .catch(() => false)
-      )
-    ).then(results => {
-      setVideosAvailable(results.some(Boolean))
-    })
-  }, [])
-
-  if (videosAvailable === null || !videosAvailable) return null
 
   return (
     <section id="video" className="py-16 sm:py-20">

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { motion, AnimatePresence } from 'framer-motion'
+import { hasVideos } from '../data/content'
 
 const LANGS = ['KZ', 'RU', 'EN'] as const
 type Lang = (typeof LANGS)[number]
@@ -20,6 +21,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
   const [active, setActive] = useState('')
+  const navItems = NAV_ITEMS.filter(({ key }) => key !== 'video' || hasVideos)
 
   const currentLang = (i18n.language.toUpperCase() as Lang) in { KZ: 1, RU: 1, EN: 1 }
     ? (i18n.language.toUpperCase() as Lang)
@@ -82,7 +84,7 @@ export default function Navbar() {
 
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-0.5">
-            {NAV_ITEMS.map(({ key, href }) => (
+            {navItems.map(({ key, href }) => (
               <button
                 key={key}
                 onClick={() => scrollTo(href)}
@@ -140,7 +142,7 @@ export default function Navbar() {
             className="fixed inset-0 z-40 bg-bg/96 backdrop-blur-xl flex flex-col items-center justify-center"
           >
             <nav className="flex flex-col items-center gap-5">
-              {NAV_ITEMS.map(({ key, href }, i) => (
+              {navItems.map(({ key, href }, i) => (
                 <motion.button
                   key={key}
                   initial={{ opacity: 0, y: 20 }}

@@ -8,6 +8,7 @@ import Projects from './components/Projects'
 import Skills from './components/Skills'
 import VideoIntro from './components/VideoIntro'
 import Certificates from './components/Certificates'
+import { hasVideos } from './data/content'
 import Contact from './components/Contact'
 
 const Background3D = lazy(() => import('./components/Background3D'))
@@ -29,7 +30,7 @@ function App() {
           <Experience />
           <Projects />
           <Skills />
-          <VideoIntro />
+          {hasVideos && <VideoIntro />}
           <Certificates />
           <Contact />
         </main>
