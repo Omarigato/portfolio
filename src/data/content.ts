@@ -60,6 +60,34 @@ export const personalInfo = {
 
 export const experiences: Experience[] = [
   {
+    id: 'nsk',
+    company: {
+      ru: 'Страховая компания НСК',
+      en: 'Insurance Company NSK',
+      kz: 'НСК Сақтандыру компаниясы',
+    },
+    role: 'Fullstack-разработчик',
+    period: { start: 'Фев 2026 / Feb 2026 / Ақп 2026', end: null },
+    stack: ['C#', '.NET', 'Oracle PL/SQL', 'SQL', 'Git'],
+    achievements: {
+      ru: [
+        'Разработка и сопровождение корпоративных бизнес-приложений на C#/.NET',
+        'Оптимизация SQL и PL/SQL запросов для повышения производительности',
+        'Рефакторинг production-кода для улучшения поддерживаемости',
+      ],
+      en: [
+        'Development and maintenance of corporate business applications on C#/.NET',
+        'Optimization of SQL and PL/SQL queries for performance improvement',
+        'Refactoring production code for better maintainability',
+      ],
+      kz: [
+        'C#/.NET тілінде корпоративті бизнес-қосымшаларды әзірлеу және қолдау',
+        'Өнімділікті арттыру үшін SQL және PL/SQL сұрауларын оңтайландыру',
+        'Қолдау мүмкіндігін жақсарту үшін production кодын қайта өңдеу',
+      ],
+    },
+  },
+  {
     id: 'eurasian',
     company: {
       ru: 'Евразийский Капитал, АО',
@@ -67,7 +95,7 @@ export const experiences: Experience[] = [
       kz: 'Еуразиялық Капитал, АҚ',
     },
     role: 'AI Engineer',
-    period: { start: 'Апр 2026 / Apr 2026 / Сәу 2026', end: null },
+    period: { start: 'Апр 2026 / Apr 2026 / Сәу 2026', end: 'Июль 2026 / Jul 2026 / Шіл 2026' },
     stack: ['Python', 'FastAPI', 'Qdrant', 'Docker', 'PostgreSQL', 'LLM', 'RAG', 'OCR'],
     achievements: {
       ru: [
@@ -84,31 +112,6 @@ export const experiences: Experience[] = [
         'Корпоративті пайдалану үшін оффлайн LLM инфрақұрылымын енгіздім',
         'Ішкі құжаттар бойынша RAG іздеу жүйесін жасадым',
         'Құжаттарды автоматты өңдеу үшін OCR конвейерін орнаттым',
-      ],
-    },
-  },
-  {
-    id: 'nsk',
-    company: {
-      ru: 'Страховая компания НСК',
-      en: 'Insurance Company NSK',
-      kz: 'НСК Сақтандыру компаниясы',
-    },
-    role: 'Fullstack Developer',
-    period: { start: 'Фев 2026 / Feb 2026 / Ақп 2026', end: null },
-    stack: ['React', 'TypeScript', 'REST API'],
-    achievements: {
-      ru: [
-        'Разрабатываю корпоративный веб-портал для страховых операций',
-        'Реализую интеграцию с внутренними REST API сервисами',
-      ],
-      en: [
-        'Developing a corporate web portal for insurance operations',
-        'Implementing integration with internal REST API services',
-      ],
-      kz: [
-        'Сақтандыру операциялары үшін корпоративті веб-порталды дамытудамын',
-        'Ішкі REST API қызметтерімен интеграцияны жүзеге асырудамын',
       ],
     },
   },
@@ -136,7 +139,7 @@ export const experiences: Experience[] = [
       kz: 'МҚҰ TAS Finance Group',
     },
     role: 'Fullstack Developer',
-    period: { start: 'Янв 2024 / Jan 2024 / Қаң 2024', end: 'Окт 2025 / Oct 2025 / Қаз 2025' },
+    period: { start: 'Март 2024 / Mar 2024 / Наурыз 2024', end: 'Окт 2025 / Oct 2025 / Қаз 2025' },
     stack: ['C#', '.NET', 'MS SQL Server', 'Dapper', 'JavaScript', 'React', 'REST API', 'Git'],
     achievements: {
       ru: [
@@ -240,25 +243,25 @@ export const skillCategories: SkillCategory[] = [
   {
     id: 'ai',
     name: { ru: 'AI / ML', en: 'AI / ML', kz: 'AI / ML' },
-    skills: ['Python', 'FastAPI', 'LLM', 'RAG', 'Qdrant', 'Embeddings', 'OCR', 'n8n', 'Claude API'],
+    skills: ['Python', 'FastAPI', 'LLM', 'RAG', 'Qdrant', 'Embeddings', 'OCR', 'n8n', 'Claude API', 'LangChain', 'LlamaIndex', 'Semantic Search', 'Document AI'],
     icon: 'cpu',
   },
   {
     id: 'backend',
     name: { ru: 'Backend', en: 'Backend', kz: 'Backend' },
-    skills: ['C#', '.NET', 'MS SQL Server', 'PostgreSQL', 'Dapper', 'REST API', 'Docker'],
+    skills: ['C#', '.NET', 'MS SQL Server', 'PostgreSQL', 'Oracle PL/SQL', 'Dapper', 'Entity Framework Core', 'REST API', 'Docker'],
     icon: 'server',
   },
   {
     id: 'frontend',
     name: { ru: 'Frontend', en: 'Frontend', kz: 'Frontend' },
-    skills: ['React', 'TypeScript', 'JavaScript', 'HTML/CSS', 'Tailwind CSS', 'Vite'],
+    skills: ['React', 'Next.js', 'TypeScript', 'JavaScript', 'HTML/CSS', 'Tailwind CSS', 'Vite'],
     icon: 'code',
   },
   {
     id: 'devops',
     name: { ru: 'DevOps', en: 'DevOps', kz: 'DevOps' },
-    skills: ['Linux', 'Git', 'Docker', 'Vercel', 'GitHub Actions'],
+    skills: ['Linux', 'Git', 'Vercel', 'GitHub Actions'],
     icon: 'cloud',
   },
   {
